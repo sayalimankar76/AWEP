@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin=0px;
+
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0W9mpmyUh550ONNzM19c3EyG4FHprELttwA&usqp=CAU);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .login {
+
+
+            background-color: rgba(0, 0, 0, 0.3);
+            color: black;
+            width: 320px;
+            height: 350px;
+            margin-left: 40%;
+            margin-top: 10%;
+            box-sizing: border-box;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .login input[type="submit"] {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            height: 35px;
+            width: 8vw;
+
+
+        }
+
+        .login input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: black;
+
+        }
+    </style>
+    <script>
+        function alertt() {
+            alert('Submit Successfully')
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="login">
+        <h3 style="color: black;">Login Here</h3>
+        <form>
+            <label for="user">Username:</label><br>
+            <input type="text" id="user" name="user"><br><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,12}"><br><br>
+
+            <input type="checkbox" id="rem" name="rem">
+            <label for="rem"> Remember Me</label><br>
+
+            <input type="checkbox" id="signed" name="signed">
+            <label for="signed"> Keep Me Signed In</label><br><br><br>
+
+            <input type="submit" value="Submit" onclick="alertt()">
+        </form>
+
+    </div>
+</body>
+
+</html>

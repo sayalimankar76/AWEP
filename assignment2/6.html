@@ -1,0 +1,70 @@
+<!--Divide the screen window using FlexBox-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divide the window with Text Content</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 50vh; display: flex;">
+        <div style="
+          flex: 1;
+          background: palevioletred;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-size: 50px;
+        ">
+            1
+        </div>
+        <div style="
+          flex: 1;
+          background-color: seagreen;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-size: 50px;
+        ">
+            2
+        </div>
+    </div>
+    <div style="background: green; height: 50vh; display: flex;">
+        <div style="
+          background: seagreen;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-size: 50px;
+        ">
+            3
+        </div>
+        <div style="
+          background: palevioletred;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-size: 50px;
+        ">
+            4
+        </div>
+    </div>
+</body>
+
+</html>
