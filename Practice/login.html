@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(img1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .loginbox {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            height: 70vh;
+            width: 20vw;
+            padding: 10px 20px;
+            margin-left: 25%;
+            border-radius: 20px;
+
+
+        }
+
+        .loginbox input[type="text"],
+        input[type="password"] {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            outline: none;
+            font-size: 17px;
+            color: white;
+
+        }
+
+        .loginbox input[type="submit"] {
+            width: 18vw;
+            height: 4vh;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            background: red;
+            font-size: 18px;
+            color: white;
+            margin-left: 18px;
+        }
+
+        .loginbox input[type="submit"]:hover {
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loginbox">
+        <h3>Login Here</h3>
+        <form>
+            <label for="user" style="font-size: 20px;">Username</label><br><br>
+            <input type="text" id="user" name="user" placeholder="Enter username" title="Must Contain"
+                required><br><br><br>
+
+            <label for="pass" style="font-size: 20px;">Password</label><br><br>
+            <input type="password" id="pass" name="pass" placeholder="Enter password" title="Must Contain"
+                required><br><br><br>
+
+            <input type="submit" value="Submit"><br><br>
+
+
+            <input type="checkbox" name="rem" id="rem">
+            <label for="rem">Remember me</label><br><br>
+
+            <input type="checkbox" name="sign" id="sign">
+            <label for="sign">sign me up</label><br><br><br>
+
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>

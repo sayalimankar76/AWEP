@@ -1,0 +1,71 @@
+const Promise = require("bluebird");
+const mysql = require("mysql");
+Promise.promisifyAll(require("mysql/lib/Connection").prototype);
+Promise.promisifyAll(require("mysql/lib/Pool").prototype);
+
+const dbadd = require("./add");
+const dbread = require("./read");
+
+const express = require("express");
+const app = express();
+
+app.get("/", async (req, res) => {
+    try {
+        const username = req.query.username;
+        const password = req.query.password;
+        const email = req.query.email;
+        const phone_no = req.query.phone_no;
+
+        const connection = mysql.createConnection({
+            user: "root",
+            password: "",
+            host: "localhost",
+            database: "cdac",
+        });
+
+        await connection.connectAsync();
+
+        let sql =
+            "INSERT INTO USER (USERNAME, PASSWORD, EMAIL, PHONE_NO) VALUES (?, ?, ?, ?)";
+        await connection.queryAsync(sql, [username, password, email, phone_no]);
+
+        await connection.endAsync();
+
+        const json = { message: "Hurrrayyy, Record Added, Lets Celebrate!!" };
+        res.json(json);
+    } catch (err) {
+        const json = { message: "Error Occured!!" };
+        res.json(json);
+    }
+
+});
+
+
+app.get("/adduser", async (req, res) => {
+    try {
+        const input = req.query;
+        await dbadd.addRecord(input);
+
+        const json = { message: "Success" };
+        res.json(json);
+    } catch (err) {
+        const json = { message: "Failure" };
+        res.json(json);
+
+
+    }
+});
+
+
+app.get("/alluser", async (req, res) => {
+    try {
+        const results = await dbread.readAllUser();
+
+        res.json(results);
+    } catch (err) {
+        const json = { message: "Failure" };
+        res.json(json);
+    }
+});
+
+app.listen(3000);

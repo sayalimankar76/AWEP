@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="2.js"></script>
+</head>
+<div>
+    <div style="display: flex; height: 10vh; background: blueviolet; align-items: center;">
+        <div style="flex: 2;"> HOME</div>
+        <div style="flex: 8;">ABOUT US</div>
+        <div style="flex: 2; display: flex; justify-content: flex-end; align-items: flex-end;">
+            LOGOUT
+        </div>
+
+    </div>
+
+    <div style="display: flex; height: 100vh;">
+
+        <div style="flex: 3;">
+
+        </div>
+
+        <div style="flex: 6; display: flex;flex-direction: column;">
+            <div
+                style="display: flex; justify-content: center;align-items: center;height: 30vh;border: 1px solid black;font-size: 20px;">
+                post something here!!!
+
+            </div>
+
+            <div style="display: flex;">
+                <div style="padding: 0px;"><button id="b1" onclick="likee()">Like 0</button></div>
+                <div><input id="in" type="text" name="" placeholder="comment here" />
+                </div>
+                <div><button onclick="comment()">comment</button></div>
+
+            </div>
+
+            <div id="commentbox">
+                <div id="placecomment" style="display: flex; justify-content: space-between;">
+                    <div>sample comment</div>
+                    <button onclick="delete(this)">Delete</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div style="flex: 3;">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<body>
+
+</body>
+
+</html>
